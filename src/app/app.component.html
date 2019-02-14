@@ -1,11 +1,9 @@
 <header>
-  <div>
-    current state: 
-  </div>
   <nav>
     <ul>
       <li><a href='#' [routerLink]='[""]'>Home</a></li>
       <li><a href='#' [routerLink]='["Login"]'>Login</a></li>
+      <li><a href='#' [routerLink]='["Register"]'>Register</a></li>
       <li *ngIf='isLogged'><span class='logout' (click)='logout()'>Logout</span></li>
 
     </ul>
