@@ -24,16 +24,17 @@ export class AuthService {
   }
   
 
-  setToken(t:string) {
+  private setToken(t:string) {
     return window.localStorage.setItem(environment.tokenKey, t);
   }
 
-  getToken(){
+  private getToken(){
     return window.localStorage.getItem(environment.tokenKey);
   }
 
 //tell me if user is logged in
-  isLogged():boolean {
-    return this.getToken()!= null;
+//should be observable of...
+  isLogged():Observable<boolean> {
+    return of(this.getToken()!= null);
   }
 }
