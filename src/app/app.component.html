@@ -1,8 +1,13 @@
 <header>
+  <div>
+    current state: 
+  </div>
   <nav>
     <ul>
       <li><a href='#' [routerLink]='[""]'>Home</a></li>
       <li><a href='#' [routerLink]='["Login"]'>Login</a></li>
+      <li *ngIf='isLogged'><span class='logout' (click)='logout()'>Logout</span></li>
+
     </ul>
   </nav>
 </header>
